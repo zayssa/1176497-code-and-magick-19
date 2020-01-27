@@ -232,24 +232,27 @@
 
     <script>
       var fireballSize = 22;
+
+      // скорость fireball-a
       var getFireballSpeed = function(left) {
-        if (left) {
-          return 5;
-        } else {
-          return 2;
-        }
-        // return left ? 5 : 2;
+        return left ? 5 : 2;
       };
       var wizardSpeed = 3;
       var wizardWidth = 70;
+
+      // высота мага
       var getWizardHeight = function(width) {
         return 1.337 * width;
       };
+
+      // положение мага по Х
       var getWizardX = function(width) {
         return width / 2 - wizardWidth / 2;
       };
+
+      // положение мага по Y
       var getWizardY = function(height) {
-        return height / 3;
+        return height / 3 - getWizardHeight(wizardWidth);
       };
     </script>
     <script src="js/game.js"></script>
